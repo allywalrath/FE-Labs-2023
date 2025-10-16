@@ -13,21 +13,34 @@ Key Terms:
 
 Objectives:
 * Use BOOTSTRAP utilities and selectors to target specific HTML elements and apply styles to them.
-* Use BOOTSTRAP utilities and selectors to change the layout, typography, and visual design of the webpage.
+* Use BOOTSTRAP utilities and selectors to change the layout, typography, and visual design of the 
+webpage.
 * Use the BOOTSTRAP utilities and selectors to control the size and spacing of HTML elements.
-* Use BOOTSTRAP utilities and selectors to create a responsive layout that adapts to different screen sizes and devices.
+* Use BOOTSTRAP utilities and selectors to create a responsive layout that adapts to different screen 
+sizes and devices.
 * Use BOOTSTRAP official documentation.
 -----------------------------------------------------
 
-Instructions: The HTML file provided has no style. Using ONLY Bootstrap CSS fill in the bootstrap class names necessary to style the page as indicated. You will have to fill in the CLASSES for each element. The Bootstrap CSS is already linked to the HTML file. This assignment provides practice in searching through the Bootstrap documentation. Take a look at the FinalProduct in the images folder to see what the page should look like when you're done. 
+Instructions: The HTML file provided has no style. Using ONLY Bootstrap CSS fill in the bootstrap class 
+names necessary to style the page as indicated. You will have to fill in the CLASSES for each element. 
+The Bootstrap CSS is already linked to the HTML file. This assignment provides practice in searching 
+through the Bootstrap documentation. Take a look at the FinalProduct in the images folder to see what 
+the page should look like when you're done. 
 
 -----------------------------------------------------
 PART 1:
 * Step 1: Install the bootstrap dependency by running npm install in your IDE terminal.
-* Step 2: In SECTION 1, add a SECONDARY (grey) background color to the BODY element by adding a class to the BODY tag that will change the background color.(See documentation: https://getbootstrap.com/docs/5.2/utilities/background/)
-* Step 3: In SECTION 1, now that the background is all grey, add a LIGHT background color to the main-container DIV element by adding the bg-light class to the BODY tag. 
-* Step 4: The banner image on top of the page doesn't fit, add a class that will make the image responsive to the window screen size. (See documentation: https://getbootstrap.com/docs/5.3/content/images/#responsive-images)
-* Step 5: Center the page title "Dog Breeds" and add a margin bottom of 5. (See documentation: https://getbootstrap.com/docs/5.3/utilities/spacing/#margin-and-padding  AND  https://getbootstrap.com/docs/5.3/utilities/text/#text-alignment)
+* Step 2: In SECTION 1, add a SECONDARY (grey) background color to the BODY element by adding a 
+class to the BODY tag that will change the background color.(See documentation: 
+https://getbootstrap.com/docs/5.2/utilities/background/)
+* Step 3: In SECTION 1, now that the background is all grey, add a LIGHT background color to the 
+main-container DIV element by adding the bg-light class to the BODY tag. 
+* Step 4: The banner image on top of the page doesn't fit, add a class that will make the image 
+responsive to the window screen size. (See documentation: 
+https://getbootstrap.com/docs/5.3/content/images/#responsive-images)
+* Step 5: Center the page title "Dog Breeds" and add a margin bottom of 5. (See documentation: 
+https://getbootstrap.com/docs/5.3/utilities/spacing/#margin-and-padding  AND  
+https://getbootstrap.com/docs/5.3/utilities/text/#text-alignment)
 
 PART 2:
 * Step 6: In SECTION 2, activate the bootstrap container class by adding "container" to the DIV's class. Also, add a margin bottom of 5 and change the font size to a level 5. (See documentation: https://getbootstrap.com/docs/5.3/utilities/text/#font-size)
@@ -65,18 +78,29 @@ PART 3:
 
   <!----- SECTION 1 ----->
 
-  <body class=" ">
-    <div id="main-container" class="container pt-2 pb-5">
+  <!--Step 2: In SECTION 1, add a SECONDARY (grey) background color to the BODY element by adding a 
+class to the BODY tag that will change the background color.(See documentation: 
+https://getbootstrap.com/docs/5.2/utilities/background/)-->
+  <body class="bg-secondary"> <!--we don't need to add css because this class came with the .json-->
+    <div id="main-container" class="container pt-2 pb-5 bg-light">
+      <!--Step 3: In SECTION 1, now that the background is all grey, add a LIGHT background color to the 
+      main-container DIV element by adding the bg-light class to the BODY tag. -->
       <div>
         <img
           src="images/banner.png"
-          class=" "
+          class="img-fluid"
           alt="Page banner art of paws, dog bones, and cartoon dogs."
           width="2000"
         />
       </div>
+      <!--Step 4: The banner image on top of the page doesn't fit, add a class that will make the image 
+responsive to the window screen size. (See documentation: 
+https://getbootstrap.com/docs/5.3/content/images/#responsive-images)-->
 
-      <h1 class=" ">Dog Breeds</h1>
+      <h1 class="text-center mb-5">Dog Breeds</h1>
+      <!--Step 5: Center the page title "Dog Breeds" and add a margin bottom of 5. (See documentation: 
+https://getbootstrap.com/docs/5.3/utilities/spacing/#margin-and-padding  AND  
+https://getbootstrap.com/docs/5.3/utilities/text/#text-alignment)-->
 
       <!----- SECTION 2 ----->
 

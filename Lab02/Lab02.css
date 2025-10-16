@@ -4,12 +4,40 @@
    FE Lab02
 */
 /*----------------------------------------------------
-Key Terms:
-* selector
-* class
-* id 
-* element 
-* flex 
+Key Terms: (Alicia's Notes):
+* selector: there are many types of selectors - there are ones based on the names of elements, like 
+using "p" in css to style a paragraph tag. that is an element selector, because the selector matches up 
+with the element in the HTML, hence we are able to style it. Other exapmles of an element selector 
+include div {, (I'm just adding the fist curly brace for convenience), h1 {, ul {, li {, section { 
+- basically anything that is an element can be made into an element selector. Element selectors fall 
+into the category of Simple Selectors
+
+There are five types of selectors: (Alicia added these and the numbers):
+1. simple selectors: they select elements based on the type of element, id, or class
+2. combinator selectors: select based on a relationship between them (explain??)
+3. Pseudo-class selectors (select elements based on a certain state)
+4. Pseudo-elements selectors (select and style a part of an element)
+5. Attribute selectors (select elements based on an attribute or attribute value)
+
+explain 2-5 in own words
+
+* class: an attribute, but you get to give it a made up name to help CSS identify it - for example, 
+you can name the class attribute "red-paragraph" (<p class="red-paragraph">Example Text</p> and in 
+CSS name it .red-paragraph, and then make the text color red by adding "color: red" after the first 
+curly brace. it is a type of selector, so it works like the element selector. it's just used to connect 
+the HTML with the CSS via a distinguishing term like "red-paragraph", "large-heading", 
+"small-header", etc.
+
+* id: id is similar to class, the main difference is that you can only use an id selector for one 
+element on a page, while class selectors can be used for multiple elements on a page. an id selector 
+can be used for something like a book mark, which enables users to hop to different areas on a page if 
+the page is too long.
+
+* element: an element has a start tag, content, and an end tag. it has to comprise of all of those in 
+order to be an element, it can't just be a start tag to count as an element.
+
+* flex: where items are positioned, and how much space is put in-between items, rows, etc. - the itmems 
+sit on a main axis and a cross axis, like x and y axes 
 
 Objectives:
 * Use CSS selectors to target specific HTML elements and apply styles to them.
@@ -19,30 +47,49 @@ Objectives:
 * Use browser developer tools to inspect and debug their CSS.
 -----------------------------------------------------
 
-Instructions: The HTML file is complete and images have been provided. The CSS file is missing many properties but all necessary ELEMENTS, ID, and CLASS SELECTORS are already provided. Use the HTML file to find the element's ID or CLASS to be used as a selector in the CSS file to add the properties in the correct place. The CSS file is already linked to the HTML file.
+Instructions: The HTML file is complete and images have been provided. The CSS file is missing many 
+properties but all necessary ELEMENTS, ID, and CLASS SELECTORS are already provided. Use the HTML 
+file to find the element's ID or CLASS to be used as a selector in the CSS file to add the properties 
+in the correct place. The CSS file is already linked to the HTML file.
 
 -----------------------------------------------------
 
 PART 1: Using the ELEMENT Selector:
-* Step 1: Target the html BODY element and give it a top and bottom margin of 1rem and a left and right margin of 5rem.
-* Step 2: Target the page title and give it a filter of drop-shadow with x offset of 2 pixels, y offset of 2 pixels, blur of 1 pixel and hex color code of #0f6a9e.(See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
+* Step 1: Target the html BODY element and give it a top and bottom margin of 1rem and a left and right 
+margin of 5rem.
+* Step 2: Target the page title and give it a filter of drop-shadow with x offset of 2 pixels, y offset 
+of 2 pixels, blur of 1 pixel and hex color code of #0f6a9e.(See documentation 
+https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
 * Step 3: Target all of the paragraphs and lists on the page to give it a font size of 20 pixels. 
 * Step 4: Target all of the image elements, assign the following:
         * margin (top, right, bottom, and left) of 1 rem
-        * border radius of 1rem (See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
-        * box shadow with an x offset of 2 pixels, y offset of 2 pixels, blur of 2 pixels, spread radius of 1 pixel, a, rgb color of black with a transparency of 0.5. (See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+        * border radius of 1rem (See documentation 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
+        * box shadow with an x offset of 2 pixels, y offset of 2 pixels, blur of 2 pixels, spread radius 
+        of 1 pixel, a, rgb color of black with a transparency of 0.5. (See documentation 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
 * Step 5: The top image has a caption, give it a font color of rgb(0, 58, 66).
-* Step 6: Align the paragraph in the footer to the center.(See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+* Step 6: Align the paragraph in the footer to the center.(See documentation 
+https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
 
 -----------------------------------------------------
 
 PART 2: Using ID or CLASS Selectors: 
-* Step 1: Notice that there are 2 images at the top, one shorter than the other. In the HTML file, find the ID for the shorter image and give it a property of {display: none;} in the CSS file.
-* Step 2: Now that the shorter image is hidden, when the screen is 500 pixels or less, the shorter image needs to display once again and the longer image needs to be hidden. Go to the last MEDIA QUERY in the CSS file and add the necessary properties to make this happen. If using Chrome, use the Chrome Dev tools to check the web page's responsiveness.
-* Step 3: The caption for the top banner image is not under the image like it should be. Add a property to make the caption wrap under the image using flex.
+* Step 1: Notice that there are 2 images at the top, one shorter than the other. In the HTML file, find 
+the ID for the shorter image and give it a property of {display: none;} in the CSS file.
+* Step 2: Now that the shorter image is hidden, when the screen is 500 pixels or less, the shorter image 
+needs to display once again and the longer image needs to be hidden. Go to the last MEDIA QUERY in the 
+CSS file and add the necessary properties to make this happen. If using Chrome, use the Chrome Dev tools 
+to check the web page's responsiveness.
+* Step 3: The caption for the top banner image is not under the image like it should be. Add a property 
+to make the caption wrap under the image using flex.
 * Step 4: In the DIV that has the 4 images, justify the content by putting space around each image.
-* Step 5: Give the DIV that houses the "Top 5 Places to Visit..." a background color of rgb(0, 58, 66) and a border radius of 1 rem.
-* Step 6: The DIV that houses the "Tips and Reccs" appears to be squished when the screen size is less than 1100 pixels. Add to the appropriate MEDIA QUERY a property that will allow the div to wrap down and then justify the contents to the center. Start by taking a look at the CSS for that DIV outside of the MEDIA QUERY to understand how the DIV is behaving.
+* Step 5: Give the DIV that houses the "Top 5 Places to Visit..." a background color of rgb(0, 58, 66) 
+and a border radius of 1 rem.
+* Step 6: The DIV that houses the "Tips and Recs" appears to be squished when the screen size is less 
+than 1100 pixels. Add to the appropriate MEDIA QUERY a property that will allow the div to wrap down and 
+then justify the contents to the center. Start by taking a look at the CSS for that DIV outside of the 
+MEDIA QUERY to understand how the DIV is behaving.
 
 -----------------------------------------------------
 
@@ -51,16 +98,18 @@ PART 2: Using ID or CLASS Selectors:
 /* ↓ YOUR CSS CODE HERE ↓  */
 
 /* 
-The asterisk (*) selector targets every element on the page. It is called the UNIVERSAL SELECTOR. Using a temporary red border around elements can prove to be helpful with visualizing the CSS box-model. Seeing all of the margins, borders, and padding of all 
+The asterisk (*) selector targets every element on the page. It is called the UNIVERSAL SELECTOR. Using 
+a temporary red border around elements can prove to be helpful with visualizing the CSS box-model. Seeing 
+all of the margins, borders, and padding of all 
 of the elements on the page can help fix issues with spacing too, especially if you're new to CSS. 
 */
 
 /* ---UNIVERSAL SELECTOR--- */
 /* OPTIONAL ↓ REMOVE COMMENTS TO SEE RED BORDER:*/
 
-* {
+/** {
   border: 1px solid red;
-}
+}*/
 
 /* ---ELEMENT SELECTORS--- */
 
@@ -69,18 +118,27 @@ html {
   background: linear-gradient(180deg, #84daf5, #89ffff, #affffa, #ffffff);
 }
 body {
+  margin: 1rem 5rem; /* top/bottom; left/right */
+  /* top right bottom left for four different values */
 }
 
 h1 {
   text-align: center;
+  filter: drop-shadow(2px 2px 1px #0f6a9e) /* Step 2: Target the page title and give it a filter of 
+  drop-shadow with x offset of 2 pixels, y offset of 2 pixels, blur of 1 pixel and hex color code of 
+  #0f6a9e. */
+
 }
 h2 {
   margin: 4rem auto 1rem auto;
   text-align: center;
 }
-p,
-li {
+/* * Step 3: Target all of the paragraphs and lists on the page to give it a font size of 20 pixels. */
+
+p, li {
+font-size: 20px;
 }
+
 ol {
   padding: 20px;
 }
@@ -89,13 +147,31 @@ ol li {
   padding: 10px 0;
 }
 img {
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 0.5);
 }
-figcaption {
+/* Step 4: Target all of the image elements, assign the following:
+        * margin (top, right, bottom, and left) of 1 rem
+        * border radius of 1rem (See documentation 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
+        * box shadow with an x offset of 2 pixels, y offset of 2 pixels, blur of 2 pixels, spread radius 
+        of 1 pixel, a, rgb color of black with a transparency of 0.5. (See documentation 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) */
+
+figcaption { /* in order to make this wrap, you need to change the div that it's in (called "banner-div"*/
   text-align: center;
   font-weight: bold;
+  color: rgb(0, 58, 66);
 }
+  /* Step 3: The caption for the top banner image is not under the image like it should be. Add a property 
+to make the caption wrap under the image using flex. */
+/* in order to make this wrap, you need to change the div that it's in (called "banner-div"*/
 footer {
   margin: 2rem 0 2rem 0;
+  /* Step 6: Align the paragraph in the footer to the center.(See documentation 
+https://developer.mozilla.org/en-US/docs/Web/CSS/text-align) */
+text-align: center;
 }
 
 /* ---CUSTOM CLASS NAME SELECTORS--- */
@@ -103,30 +179,49 @@ footer {
 .banner-div {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  /* Step 3: The caption for the top banner image is not under the image like it should be. Add a 
+  property to make the caption wrap under the image using flex. */
 }
+
 #banner-long {
   max-width: 100%;
   height: auto;
 }
 #banner-short {
   width: 230px;
+  display: none;
+  /* Step 1: Notice that there are 2 images at the top, one shorter than the other. In the HTML file, 
+  find the ID for the shorter image and give it a property of {display: none;} in the CSS file. */
 }
 .img-div {
   display: flex;
   flex-wrap: wrap;
+  /* Step 4: In the DIV that has the 4 images, justify the content by putting space around each image. */
+  justify-content: start;
 }
 
 .tips-div {
   display: flex;
   flex-wrap: nowrap;
   justify-content: start;
+  /* Step 6: The DIV that houses the "Tips and Recs" appears to be squished when the screen size is less 
+than 1100 pixels. Add to the appropriate MEDIA QUERY a property that will allow the div to wrap down and 
+then justify the contents to the center. Start by taking a look at the CSS for that DIV outside of the 
+MEDIA QUERY to understand how the DIV is behaving. */
 }
+
 .top-places-div {
   max-width: 800px;
   margin: 5rem auto;
   color: rgb(253, 197, 132);
   padding: 1rem 2rem;
+  background-color: rgb(0, 58, 66);
+  border-radius: 1rem;
+  /*Step 5: Give the DIV that houses the "Top 5 Places to Visit..." a background color of rgb(0, 58, 66) 
+and a border radius of 1 rem.*/
 }
+
 .top-places-div h2 {
   text-align: center;
   margin: 1rem auto;
@@ -135,7 +230,9 @@ footer {
 
 /* ----- MEDIA QUERIES for RESPONSIVE DESIGN ----- */
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1500px) { /*media queries are basically saying "if the page is this 
+  big or this small, do this instead. the media query will override the CSS when the screen has a 
+  max-width of 1500 pixels, 1100px, or 500px */
   .img-div img {
     width: 420px;
   }
@@ -143,6 +240,8 @@ footer {
 
 @media only screen and (max-width: 1100px) {
   .tips-div {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -150,9 +249,8 @@ footer {
   body {
     margin: 1rem;
   }
-  p,
-  li {
-    font-size: 16px;
+  p, li {
+    font-size: 20px; /* it was at 16px before, maybe they don't want you to change this one? */
   }
   .img-div img {
     width: 230px;
@@ -161,8 +259,15 @@ footer {
     width: 230px;
   }
   #banner-long {
+    display: none; /* i knew it */
   }
+
   #banner-short {
+    display: block; /* use f12 on the browser to check that this worked */
   }
 }
+/* Step 2: Now that the shorter image is hidden, when the screen is 500 pixels or less, the shorter image 
+needs to display once again and the longer image needs to be hidden. Go to the last MEDIA QUERY in the 
+CSS file and add the necessary properties to make this happen. If using Chrome, use the Chrome Dev tools 
+to check the web page's responsiveness. */
 /* ------------------------- */
