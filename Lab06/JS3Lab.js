@@ -152,11 +152,11 @@ console.log(myToDoList); //shows what we have left ('read', 'do homework')
 let yourToDoList = ['paint', 'sketch', 'chores'];
 
 /*let ourToDoList = myToDoList.concat(yourToDoList);
-console.log("Step 4:", ourToDoList);*/
+console.log("Step 5:", ourToDoList);*/
 
 //SPREAD SYNTAX VERSION:
 let ourToDoList = [...myToDoList, ...yourToDoList];
-console.log("Step 4:", ourToDoList);
+console.log("Step 5:", ourToDoList);
  
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Question 5: isEven 

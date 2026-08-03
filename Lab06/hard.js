@@ -61,7 +61,8 @@ let alphabetString = 'abcdefghijklmnopqrstuvwxyz';
  * 
  * ↓ YOUR CODE HERE ↓ */
 
-console.log(alphabetString.split());
+let alphabetStringCopy = alphabetString.split();
+console.log(alphabetStringCopy);
 
 
 /* ↑ YOUR CODE HERE ↑ */
@@ -86,8 +87,8 @@ let alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
  * 
  * ↓ YOUR CODE HERE ↓ */
 
- console.log("Step 1:", alphabetArray.reverse());
- console.log("Step 2:", alphabetArray.join(''));
+console.log("Step 1:", alphabetArray.reverse());
+console.log("Step 2:", alphabetArray.join(''));
 
 
 /* ↑ YOUR CODE HERE ↑ */
@@ -116,9 +117,9 @@ console.log("Step 1:", array1);
 console.log("Step 2:", array1[2]);
 console.log("Step 3:", array1[array1.length - 1]);
 console.log("Step 4:", array1.push(16, 3));
-console.log(array1);
 console.log("Step 5:", array1[2]);
 console.log("Step 6:", array1[array1.length - 1]);
+
 
 /* ↑ YOUR CODE HERE ↑ */
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -146,22 +147,19 @@ Question 4: To-Do List \n`);
 
 let myToDoList = [];
 
-myToDoList.push("hw", "feed cat", "groceries");
-console.log("Step 2:", myToDoList);
-
-myToDoList.splice(1, 1);
-console.log("Step 3:", myToDoList);
+console.log("Step 2:", myToDoList.push("hw", "read", "groceries"));
+console.log("Step 3:", myToDoList.splice(2, 1));
 
 let yourToDoList = [];
+console.log("Step 4:", yourToDoList.push("gardening", "make dinner"));
+console.log(yourToDoList);
 
-yourToDoList.push("sodypop", "yep");
-console.log("Step 4:", yourToDoList);
+/*let ourToDoList = myToDoList.concat(yourToDoList);
+console.log("Step 5:", ourToDoList);*/
 
-//let ourToDoList = myToDoList.concat(yourToDoList); //// CONCAT VER
-
-let ourToDoList = [...myToDoList, ...yourToDoList]; //// SPREAD SYNTAX VER
-
-console.log(ourToDoList);
+//SPREAD SYNTAX VERSION:
+let ourToDoList = [...myToDoList, ...yourToDoList];
+console.log("Step 5:", ourToDoList);
 
  /* ↑ YOUR CODE HERE ↑ */
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -181,7 +179,7 @@ Question 5: isEven  \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
-function isEven(x){
+function isEven(x) {
   if (x % 2 === 0) {
     return true;
   } else {
@@ -214,13 +212,11 @@ Question 6: addingMachine \n`);
  * ↓ YOUR CODE HERE ↓ */
 
 function addingMachine(x) {
-
   let sum = 0;
-
   for (let i = 0; i < x.length; i++) {
     sum = sum + x[i];
-    
   }
+
   return sum;
 }
 
@@ -261,7 +257,7 @@ function reverse(x) {
     return x.toString().split('').reverse().join('');
   } else if (typeof x === 'string') {
     return x.split('').reverse().join('');
-  } else if (Array.isArray(x)) {
+  } else if (Array.isArray) {
     return x.reverse();
   } else {
     return false;
@@ -302,6 +298,7 @@ function removeElements(array) {
   while (array.length > 0) {
     array.pop();
   }
+
   return array;
 }
 
@@ -329,19 +326,11 @@ determine which array has the most elements
  * 
  * ↓ YOUR CODE HERE ↓ */
 
-function whichArrayIsLonger(array1, array2) {
-  if (array1 > array2) {
-    return array1;
-  } else if (array2 > array1) {
-    return array2;
-  } else {
-    return false;
-  }
-}
+
 
 /* ↑ YOUR CODE HERE ↑ */
 
 // Sample test cases for the above whichArrayIsLonger function (uncomment to test)
-console.log(whichArrayIsLonger([1, 2, 3, 4, 5], [1, 2, 3, 4]));    //should return [1, 2, 3, 4, 5]
-console.log(whichArrayIsLonger([1, 2, 3, 4], [1, 2, 3, 4, 5, 6])); ///should return [1, 2, 3, 4, 5, 6]
-console.log(whichArrayIsLonger([1, 2, 3, 4], [1, 2, 3, 4]));       //should return false (because they are the same length)
+//console.log(whichArrayIsLonger([1, 2, 3, 4, 5], [1, 2, 3, 4]));    //should return [1, 2, 3, 4, 5]
+//console.log(whichArrayIsLonger([1, 2, 3, 4], [1, 2, 3, 4, 5, 6])); ///should return [1, 2, 3, 4, 5, 6]
+//console.log(whichArrayIsLonger([1, 2, 3, 4], [1, 2, 3, 4]));       //should return false (because they are the same length)

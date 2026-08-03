@@ -1,0 +1,94 @@
+/* now the classes PromotionSender and Collections sender only have what's different 
+between them -- the two methods they used to share are now in their own class, called 
+NotificationSender */
+
+/* 
+- extract the common code into a parent class, and then have the children classes 
+inherit that code 
+
+- common code becomes manageable in one place, maintainability becomes easier
+*/
+
+// NOTIFICATION SENDER CLASS:
+class NotificationSender {
+    constructor(status) { 
+        this.status = status; 
+    }
+
+    sendNotification(notification) { 
+        console.log("Sending: " + notification);
+    }
+
+    findUsersWithStatus(status) { 
+        let users = getUsers(status);
+        return users;
+    }
+    
+}
+
+// PROMOTION SENDER CLASS:
+class PromotionSender extends NotificationSender { // now PromotionSender inherits from NotificationSender
+    constructor(status) { // takes status
+        super(status); // we pass this status into super()
+    }
+    calculateDiscount(status) { 
+        if (status === "GOLD") {
+            return .3; 
+        } else if (status === "SILVER") {
+            return .15;
+        }
+        return 0;
+    }
+}
+
+/* instead of writing out a program for sending emails, we're 
+just gonna log out the email notification to the console to stand
+in for that (the sendNotification method) */
+
+// COLLECTIONS SENDER CLASS:
+
+class CollectionsSender extends NotificationSender { // now CollectionsSender inherits from NotificationSender
+    constructor(status) { // takes status
+        super(status); // we pass this status into super
+    }
+
+    calculateFee(status) {
+        if (status === "OVERDUE") {
+            return 10; // $10 fee
+        } else if (status === "DELINQUENT") {
+            return 25; // $25 fee
+        }
+        return 5; // else, return a $5 fee
+    }
+}
+
+/* extract the common code into a parent class, and then have the 
+children classes inherit that code */
+
+// common code becomes manageable in one place, maintainability becomes easier
+
+/* NOTES:
+- the extends keyword is used to inherit properties from one class to another
+- we're calling a method named super() in the two derived classes
+- super refers to the parent class
+- when followed by parentheses, it refers to the parent class constructor (which is status?)
+- "super" is like the "this" keyword, because "this" represents the specific instance of the 
+class you're dealing with (and "super" refers to the specific instance of the parent class 
+that you inherit from)
+- you must always call the parent's constructor in a class that extends another class
+- because the last two classes inherit from the 1st class, they have access to the methods in it
+- if we made an instance of CollectionSenderClass, we could call, send notification, and find users 
+(methods from NotificationSender) from the comfort of that instance. here's an exmaple of an 
+instance below:
+*/
+
+let collectionsSender = new CollectionsSender("OVERDUE"); // passed in a status of "OVERDUE"
+collectionsSender.sendNotification("this is a test collections notification"); 
+
+
+/* 
+- you can call calculateFee, findUsersWithStatus, and sendNotification 
+- notice how we called sendNotification even though it's not part of the CollectionsSender class
+- it works because we extended the NotificationSender class, which does contain these methods, 
+to the CollectionsSender class
+*/

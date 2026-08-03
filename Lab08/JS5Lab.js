@@ -41,7 +41,7 @@ Question 1: Object Values \n`)
 
 // Provided code:
 let person = {
-  firstname: 'Niel',
+  firstname: 'Neil',
   lastname: 'Armstrong',
   year: 1969,
   occupation: 'astronaut',
